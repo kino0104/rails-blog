@@ -829,3 +829,125 @@ Processing by PostsController#create as HTML
 Completed 200 OK in 38ms (Views: 22.0ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/posts" for 111.239.141.254 at 2018-02-25 14:57:33 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 57ms (Views: 49.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts/new" for 111.239.141.254 at 2018-02-25 14:57:36 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 111.239.141.254 at 2018-02-25 15:01:00 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/7/edit" for 111.239.141.254 at 2018-02-25 15:03:10 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 83ms (Views: 66.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/7/edit" for 111.239.141.254 at 2018-02-25 15:05:45 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 165ms (Views: 147.2ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/posts/7" for 111.239.141.254 at 2018-02-25 15:06:04 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eq2u+CBivD3JoN3Ep9u7FNBVLpYEUn7xyc/wmcnWy8vfs0oIoW14PwDkzhIs5kPnsvC74meQdF34WjQd9X2etA==", "post"=>{"title"=>"1234 update", "body"=>"1234\r\nupdate"}, "commit"=>"Update Post", "id"=>"7"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (undefined local variable or method `post_param' for #<PostsController:0x007f5bf814e280>
+Did you mean?  post_params
+               post_path
+               to_param):
+  
+app/controllers/posts_controller.rb:36:in `update'
+Started PATCH "/posts/7" for 111.239.141.254 at 2018-02-25 15:06:26 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eq2u+CBivD3JoN3Ep9u7FNBVLpYEUn7xyc/wmcnWy8vfs0oIoW14PwDkzhIs5kPnsvC74meQdF34WjQd9X2etA==", "post"=>{"title"=>"1234 update", "body"=>"1234\r\nupdate"}, "commit"=>"Update Post", "id"=>"7"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "1234 update"], ["body", "1234\r\nupdate"], ["updated_at", "2018-02-25 15:06:27.126950"], ["id", 7]]
+  [1m[35m (23.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-dotinstall-kino0104.c9users.io/posts
+Completed 302 Found in 231ms (ActiveRecord: 26.0ms)
+
+
+Started GET "/posts" for 111.239.141.254 at 2018-02-25 15:06:27 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 53ms (Views: 47.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/7" for 111.239.141.254 at 2018-02-25 15:06:32 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 41ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/7/edit" for 111.239.141.254 at 2018-02-25 15:06:36 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/7" for 111.239.141.254 at 2018-02-25 15:06:44 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 109ms (Views: 106.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/7" for 111.239.141.254 at 2018-02-25 15:07:09 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.2ms)
+
+
