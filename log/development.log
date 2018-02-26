@@ -951,3 +951,524 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 111.239.141.254 at 2018-02-25 23:13:47 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index.html.erb within layouts/application (169.2ms)
+Completed 200 OK in 210ms (Views: 203.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/new" for 111.239.141.254 at 2018-02-25 23:13:58 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.9ms)
+  Rendered posts/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 111.239.141.254 at 2018-02-25 23:14:26 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RoBbskTBCK9EF2i9EeTRctgROOPjWM8QN6iUSi6PUhwJJRHE+tJ+Iuv+oC/aLZP45r8d0CGr0IE89SKsUs8sTQ==", "post"=>{"title"=>"New Post", "body"=>"New Post Body"}, "commit"=>"Create Post"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (12.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "New Post"], ["body", "New Post Body"], ["created_at", "2018-02-25 23:14:26.496888"], ["updated_at", "2018-02-25 23:14:26.496888"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-dotinstall-kino0104.c9users.io/posts
+Completed 302 Found in 36ms (ActiveRecord: 26.0ms)
+
+
+Started GET "/posts" for 111.239.141.254 at 2018-02-25 23:14:26 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/8/edit" for 111.239.141.254 at 2018-02-25 23:14:37 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.8ms)
+  Rendered posts/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/8" for 111.239.141.254 at 2018-02-25 23:14:56 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pRmAPOSVHmyqkZlWdcNa8MbclEf9stNhcuyXm1aRGQdexv7ELcCxqCulQ60OSCMt7G0Cv6fk3d53un2szod4Dg==", "post"=>{"title"=>"New Post 2", "body"=>"New Post Body 2"}, "commit"=>"Update Post", "id"=>"8"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "New Post 2"], ["body", "New Post Body 2"], ["updated_at", "2018-02-25 23:14:56.157003"], ["id", 8]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-dotinstall-kino0104.c9users.io/posts
+Completed 302 Found in 19ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/posts" for 111.239.141.254 at 2018-02-25 23:14:56 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 111.239.141.254 at 2018-02-25 23:22:16 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index.html.erb within layouts/application (285.7ms)
+Completed 500 Internal Server Error in 296ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<#<Class:0x007f5c04110488>:0x007f5c0410a538>):
+     9:         <%= link_to '[Edit]', edit_post_path(post), class: 'command' %>
+    10:         <%= link_to '[x]', 
+    11:         post_path(post), 
+    12:         method: delete, 
+    13:         class: 'command', 
+    14:         data: { confirm: 'Sure?'}
+    15:         %>
+  
+app/views/posts/index.html.erb:12:in `block in _app_views_posts_index_html_erb___4246197653519542522_70016590972560'
+app/views/posts/index.html.erb:6:in `_app_views_posts_index_html_erb___4246197653519542522_70016590972560'
+Started GET "/posts" for 111.239.141.254 at 2018-02-25 23:23:57 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index.html.erb within layouts/application (191.9ms)
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<#<Class:0x007f5c04110488>:0x007f5bf8267f18>):
+     9:         <%= link_to '[Edit]', edit_post_path(post), class: 'command' %>
+    10:         <%= link_to '[x]', 
+    11:         post_path(post), 
+    12:         method: delete, 
+    13:         class: 'command', 
+    14:         data: { confirm: 'Sure?' }
+    15:         %>
+  
+app/views/posts/index.html.erb:12:in `block in _app_views_posts_index_html_erb___4246197653519542522_70016491095220'
+app/views/posts/index.html.erb:6:in `_app_views_posts_index_html_erb___4246197653519542522_70016491095220'
+Started GET "/posts" for 111.239.141.254 at 2018-02-25 23:24:45 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/posts/8" for 111.239.141.254 at 2018-02-25 23:24:54 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QkB63wbIIU99L0ShQ+AyZqAuW5UOGJQXfJ8Cid+FzAfnXp4vh8flTbRrV3fI3cqVwovO4W3anrtNCsYN4y6ZeA==", "id"=>"8"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 8]]
+  [1m[35m (130.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-dotinstall-kino0104.c9users.io/posts/8
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 131.0ms)
+
+
+  
+NoMethodError (undefined method `posts_path' for #<String:0x007f5bfc3748d0>):
+  
+app/controllers/posts_controller.rb:46:in `destroy'
+Started DELETE "/posts/8" for 111.239.141.254 at 2018-02-25 23:25:46 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QkB63wbIIU99L0ShQ+AyZqAuW5UOGJQXfJ8Cid+FzAfnXp4vh8flTbRrV3fI3cqVwovO4W3anrtNCsYN4y6ZeA==", "id"=>"8"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 404 Not Found in 9ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=8):
+  
+app/controllers/posts_controller.rb:44:in `destroy'
+Started GET "/posts" for 111.239.141.254 at 2018-02-25 23:25:56 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/posts/7" for 111.239.141.254 at 2018-02-25 23:26:02 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UQDX16u/gHJT6AmJC3o9m62oXEj0PUCwZL+HkjcECEX0HjMnKrBEcJqsGl+AR8Vozw3JPJf/ShxVKkMWC69dOg==", "id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 7]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-dotinstall-kino0104.c9users.io/posts
+Completed 302 Found in 13ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/posts" for 111.239.141.254 at 2018-02-25 23:26:02 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateComments (20180225233028)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_2fd19c0db7"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_post_id" ON "comments" ("post_id")[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180225233028"]]
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+Started GET "/posts/6" for 111.239.141.254 at 2018-02-25 23:39:55 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 97ms (Views: 78.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts/6" for 111.239.141.254 at 2018-02-25 23:39:56 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts/6/comments" for 111.239.141.254 at 2018-02-25 23:56:46 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M0povdiMgNdgmxD9mbLxpwEzQlY367BwFSjRKbQ05lmWVIxNWYNE1anfAysSjwlUY5bXIlQputwkvRWtiJ+zJg==", "comment"=>{"body"=>"new comment"}, "commit"=>"Create Comment", "post_id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "new comment"], ["post_id", 6], ["created_at", "2018-02-25 23:56:46.885960"], ["updated_at", "2018-02-25 23:56:46.885960"]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-dotinstall-kino0104.c9users.io/posts/6
+Completed 302 Found in 49ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/posts/6" for 111.239.141.254 at 2018-02-25 23:56:47 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "comments" WHERE "comments"."post_id" = ? LIMIT ?[0m  [["post_id", 6], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 46ms (Views: 43.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts/6/comments" for 111.239.141.254 at 2018-02-25 23:56:55 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S5tX2yaC551DMGcITlvaW2kJD08Jz+ct9HRADRLRdsvuhbMrp40jn4p0dN7FZiKoC6yaO2oN7YHF4YSJLnojtA==", "comment"=>{"body"=>"comment2"}, "commit"=>"Create Comment", "post_id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "comment2"], ["post_id", 6], ["created_at", "2018-02-25 23:56:55.966333"], ["updated_at", "2018-02-25 23:56:55.966333"]]
+  [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-dotinstall-kino0104.c9users.io/posts/6
+Completed 302 Found in 16ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/posts/6" for 111.239.141.254 at 2018-02-25 23:56:56 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "comments" WHERE "comments"."post_id" = ? LIMIT ?[0m  [["post_id", 6], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/posts/6/comments" for 111.239.141.254 at 2018-02-25 23:57:00 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MCfuTNeogkjeq2m+gys9X/hfmzHmuRzD9z5CGNvMmQCVOQq8VqdGShfvemgIFsWsmvoORYV7Fm/Gq4ac52fMfw==", "comment"=>{"body"=>""}, "commit"=>"Create Comment", "post_id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-dotinstall-kino0104.c9users.io/posts/6
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/6" for 111.239.141.254 at 2018-02-25 23:57:00 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "comments" WHERE "comments"."post_id" = ? LIMIT ?[0m  [["post_id", 6], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/6" for 111.239.141.254 at 2018-02-26 00:01:07 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "comments" WHERE "comments"."post_id" = ? LIMIT ?[0m  [["post_id", 6], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (286.6ms)
+Completed 500 Internal Server Error in 312ms (ActiveRecord: 4.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `commnet' for #<#<Class:0x007f5bf86ec2a0>:0x007f5bf86e24f8>
+Did you mean?  comment):
+     7:     <% @post.comments.each do |comment| %>
+     8:     <li><%= comment.body %></li>
+     9:         <%= link_to '[x]', 
+    10:         post_comment_path(@post, commnet), 
+    11:         method: :delete, 
+    12:         class: 'command', 
+    13:         data: { confirm: 'Sure?' }
+  
+app/views/posts/show.html.erb:10:in `block in _app_views_posts_show_html_erb___2856660579345769353_70016493381020'
+app/views/posts/show.html.erb:7:in `_app_views_posts_show_html_erb___2856660579345769353_70016493381020'
+Started GET "/posts/6" for 111.239.141.254 at 2018-02-26 00:01:52 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "comments" WHERE "comments"."post_id" = ? LIMIT ?[0m  [["post_id", 6], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 42ms (Views: 38.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/6" for 111.239.141.254 at 2018-02-26 00:02:47 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "comments" WHERE "comments"."post_id" = ? LIMIT ?[0m  [["post_id", 6], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/posts/6/comments/1" for 111.239.141.254 at 2018-02-26 00:02:55 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KwvbKwdNtDMp9Y9c9WeBaKYAzljhF/bYy1Nf0VINQFaOFT/bhkJwMeCxnIp+WnmbxKVbLILV/HT6xptVbqYVKQ==", "post_id"=>"6", "id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."id" = ? LIMIT ?[0m  [["post_id", 6], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 1]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-dotinstall-kino0104.c9users.io/posts/6
+Completed 302 Found in 16ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/posts/6" for 111.239.141.254 at 2018-02-26 00:02:56 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "comments" WHERE "comments"."post_id" = ? LIMIT ?[0m  [["post_id", 6], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  Rendered posts/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 111.239.141.254 at 2018-02-26 00:05:35 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 138ms (Views: 128.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/new" for 111.239.141.254 at 2018-02-26 00:05:39 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (3.2ms)
+  Rendered posts/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 57ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 111.239.141.254 at 2018-02-26 00:05:49 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4zDRtT7GNSBWWleP7kPfh60pqyPj0OQE6OR6WDSg4c2slZvDgNVDrfmznx0lip0Nk4eOECEj+5Xjucy+SOCfnA==", "post"=>{"title"=>"sample", "body"=>"sample body"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "sample"], ["body", "sample body"], ["created_at", "2018-02-26 00:05:49.498613"], ["updated_at", "2018-02-26 00:05:49.498613"]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-dotinstall-kino0104.c9users.io/posts
+Completed 302 Found in 18ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/posts" for 111.239.141.254 at 2018-02-26 00:05:49 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/9/edit" for 111.239.141.254 at 2018-02-26 00:05:52 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.7ms)
+  Rendered posts/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/9" for 111.239.141.254 at 2018-02-26 00:06:00 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "comments" WHERE "comments"."post_id" = ? LIMIT ?[0m  [["post_id", 9], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 41ms (Views: 37.7ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/posts/9/comments" for 111.239.141.254 at 2018-02-26 00:06:04 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7iUkiHCNR9IFVyxuhxKA6Pg7jvZ/OUBgZD7cAafRvu9KH87AOUHXKI0RZS4lD4brlL0+4qOCnKE4s8QfQn/sFg==", "comment"=>{"body"=>"saeadf"}, "commit"=>"Create Comment", "post_id"=>"9"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "saeadf"], ["post_id", 9], ["created_at", "2018-02-26 00:06:04.720647"], ["updated_at", "2018-02-26 00:06:04.720647"]]
+  [1m[35m (177.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-dotinstall-kino0104.c9users.io/posts/9
+Completed 302 Found in 184ms (ActiveRecord: 178.0ms)
+
+
+Started GET "/posts/9" for 111.239.141.254 at 2018-02-26 00:06:05 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "comments" WHERE "comments"."post_id" = ? LIMIT ?[0m  [["post_id", 9], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered posts/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/posts/9/comments" for 111.239.141.254 at 2018-02-26 00:06:09 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aOJ/tMYVcKYbXnDReeYn3DbBlSRdVbi8vsNNJYjP1WjN/JtERxq0pNIaYwfy298vVGQAUD6XshCPVomhtGSAFw==", "comment"=>{"body"=>"sdfeagd"}, "commit"=>"Create Comment", "post_id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "sdfeagd"], ["post_id", 9], ["created_at", "2018-02-26 00:06:09.055856"], ["updated_at", "2018-02-26 00:06:09.055856"]]
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-dotinstall-kino0104.c9users.io/posts/9
+Completed 302 Found in 16ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/posts/9" for 111.239.141.254 at 2018-02-26 00:06:09 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "comments" WHERE "comments"."post_id" = ? LIMIT ?[0m  [["post_id", 9], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered posts/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 111.239.141.254 at 2018-02-26 00:06:30 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/9" for 111.239.141.254 at 2018-02-26 00:06:34 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "comments" WHERE "comments"."post_id" = ? LIMIT ?[0m  [["post_id", 9], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered posts/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/posts/9" for 111.239.141.254 at 2018-02-26 00:07:32 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ESy0L79igq9fzIUQp1ONOzWs3oAW2VeMX5kehZcDC0y0MlDfPm1GrZaIlsYsbnXIVwlL9HUbXSBuDNoBq6heMw==", "id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 3]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 4]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 9]]
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://rails-dotinstall-kino0104.c9users.io/posts
+Completed 302 Found in 18ms (ActiveRecord: 11.5ms)
+
+
+Started GET "/posts" for 111.239.141.254 at 2018-02-26 00:07:32 +0000
+Cannot render console from 111.239.141.254! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.3ms)
+
+
